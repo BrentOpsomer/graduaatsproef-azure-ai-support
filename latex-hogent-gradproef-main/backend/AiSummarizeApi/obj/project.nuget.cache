@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "dgSpecHash": "5GW6Ufqk6Ug=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\stagiair\\Documents\\latex-hogent-gradproef-main\\latex-hogent-gradproef-main\\backend\\AiSummarizeApi\\AiSummarizeApi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\stagiair\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.9\\microsoft.aspnetcore.openapi.9.0.9.nupkg.sha512",
+    "C:\\Users\\stagiair\\.nuget\\packages\\microsoft.io.recyclablememorystream\\3.0.1\\microsoft.io.recyclablememorystream.3.0.1.nupkg.sha512",
+    "C:\\Users\\stagiair\\.nuget\\packages\\microsoft.maui.graphics\\10.0.10\\microsoft.maui.graphics.10.0.10.nupkg.sha512",
+    "C:\\Users\\stagiair\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512",
+    "C:\\Users\\stagiair\\.nuget\\packages\\microsoft.win32.systemevents\\10.0.2\\microsoft.win32.systemevents.10.0.2.nupkg.sha512",
+    "C:\\Users\\stagiair\\.nuget\\packages\\msgreader\\6.0.6\\msgreader.6.0.6.nupkg.sha512",
+    "C:\\Users\\stagiair\\.nuget\\packages\\openmcdf\\3.1.0\\openmcdf.3.1.0.nupkg.sha512",
+    "C:\\Users\\stagiair\\.nuget\\packages\\rtfpipe\\2.0.7677.4303\\rtfpipe.2.0.7677.4303.nupkg.sha512",
+    "C:\\Users\\stagiair\\.nuget\\packages\\system.drawing.common\\10.0.2\\system.drawing.common.10.0.2.nupkg.sha512",
+    "C:\\Users\\stagiair\\.nuget\\packages\\system.numerics.vectors\\4.6.1\\system.numerics.vectors.4.6.1.nupkg.sha512",
+    "C:\\Users\\stagiair\\.nuget\\packages\\system.security.cryptography.pkcs\\9.0.2\\system.security.cryptography.pkcs.9.0.2.nupkg.sha512",
+    "C:\\Users\\stagiair\\.nuget\\packages\\system.text.encoding.codepages\\8.0.0\\system.text.encoding.codepages.8.0.0.nupkg.sha512",
+    "C:\\Users\\stagiair\\.nuget\\packages\\utf.unknown\\2.6.0\\utf.unknown.2.6.0.nupkg.sha512"
+  ],
+  "logs": []
+}

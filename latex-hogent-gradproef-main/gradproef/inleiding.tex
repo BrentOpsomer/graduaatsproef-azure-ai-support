@@ -5,46 +5,71 @@
 \chapter{\IfLanguageName{dutch}{Inleiding}{Introduction}}%
 \label{ch:inleiding}
 
-De inleiding moet de lezer net genoeg informatie verschaffen om het onderwerp te begrijpen en in te zien waarom de onderzoeksvraag de moeite waard is om te onderzoeken. In de inleiding ga je literatuurverwijzingen beperken, zodat de tekst vlot leesbaar blijft. Je kan de inleiding verder onderverdelen in secties als dit de tekst verduidelijkt. Zaken die aan bod kunnen komen in de inleiding~\autocite{Pollefliet2011}:
+Binnen IT-ondersteuning en servicedesk-omgevingen vormen tickets de kern van de dagelijkse werking. Ze zorgen niet alleen voor de opvolging van incidenten en aanvragen, maar zijn ook een belangrijke bron van informatie voor rapportering, kennisopbouw en procesoptimalisatie. In de praktijk wordt een ticket echter vaak aangemaakt op basis van e-mailverkeer, waarbij de inhoud van meerdere e-mails letterlijk of ongestructureerd in het systeem terechtkomt.
 
-\begin{itemize}
-  \item context, achtergrond
-  \item afbakenen van het onderwerp
-  \item verantwoording van het onderwerp, methodologie
-  \item probleemstelling
-  \item onderzoeksdoelstelling
-  \item onderzoeksvraag
-  \item \ldots
-\end{itemize}
+Supportmedewerkers moeten hierdoor vaak eerst verschillende berichten doornemen om een goed beeld te krijgen van het probleem. Dit is tijdrovend en verhoogt de kans op misinterpretatie of het missen van belangrijke details. Zeker in omgevingen waar dagelijks tientallen tot honderden tickets verwerkt worden, leidt dit tot een merkbare impact op efficiëntie en kwaliteit van dienstverlening.
+
+De snelle evolutie van artificiële intelligentie, en meer bepaald van natuurlijke taalverwerking, biedt nieuwe mogelijkheden om deze problematiek aan te pakken. Moderne AI-modellen zijn in staat om teksten automatisch samen te vatten, waarbij de essentie behouden blijft. Door deze technologie te integreren in bestaande ticketflows kan een deel van het repetitieve en manuele werk worden geautomatiseerd.
+
+Deze graduaatsproef onderzoekt de mogelijkheid om e-mails die gekoppeld worden aan nieuwe tickets automatisch te laten samenvatten met behulp van een AI-model via Microsoft Azure. De gegenereerde samenvatting wordt toegevoegd aan het ticket, zodat supportmedewerkers sneller inzicht krijgen in de context van het probleem en efficiënter kunnen werken.
 
 \section{\IfLanguageName{dutch}{Probleemstelling}{Problem Statement}}%
 \label{sec:probleemstelling}
 
-Uit je probleemstelling moet duidelijk zijn dat je onderzoek een meerwaarde heeft voor een concrete doelgroep. De doelgroep moet goed gedefinieerd en afgelijnd zijn. Doelgroepen als ``bedrijven,'' ``KMO's'', systeembeheerders, enz.~zijn nog te vaag. Als je een lijstje kan maken van de personen/organisaties die een meerwaarde zullen vinden in deze bachelorproef (dit is eigenlijk je steekproefkader), dan is dat een indicatie dat de doelgroep goed gedefinieerd is. Dit kan een enkel bedrijf zijn of zelfs één persoon (je co-promotor/opdrachtgever).
+Binnen de huidige ticketflow worden e-mails vaak integraal toegevoegd aan tickets zonder verdere structurering. Dit resulteert in lange en soms onoverzichtelijke ticketbeschrijvingen. Supportmedewerkers moeten hierdoor extra tijd besteden aan het lezen en interpreteren van de inhoud voordat ze tot actie kunnen overgaan.
+
+De concrete doelgroep van deze graduaatsproef bestaat uit:
+\begin{itemize}
+    \item servicedeskmedewerkers die dagelijks tickets verwerken op basis van e-mailverkeer;
+    \item teamleiders die instaan voor kwaliteit en efficiëntie van ticketafhandeling;
+    \item IT-organisaties die hun ticketdocumentatie willen verbeteren met het oog op kennisbeheer.
+\end{itemize}
+
+Voor deze doelgroep vormt de huidige manier van werken een rem op efficiëntie en kwaliteit. Er is nood aan een oplossing die automatisch de essentie uit e-mails filtert en deze gestructureerd toevoegt aan het ticket, zonder dat dit extra werk vraagt van de medewerkers.
 
 \section{\IfLanguageName{dutch}{Onderzoeksvraag}{Research question}}%
 \label{sec:onderzoeksvraag}
 
-Wees zo concreet mogelijk bij het formuleren van je onderzoeksvraag. Een onderzoeksvraag is trouwens iets waar nog niemand op dit moment een antwoord heeft (voor zover je kan nagaan). Het opzoeken van bestaande informatie (bv. ``welke tools bestaan er voor deze toepassing?'') is dus geen onderzoeksvraag. Je kan de onderzoeksvraag verder specifiëren in deelvragen. Bv.~als je onderzoek gaat over performantiemetingen, dan 
+De centrale onderzoeksvraag van deze graduaatsproef luidt als volgt:
+
+\begin{quote}
+Hoe kan automatische samenvatting van e-mails met behulp van AI geïntegreerd worden in een ticketingsysteem, en welke meerwaarde biedt dit op vlak van efficiëntie, kwaliteit en kost?
+\end{quote}
+
+Deze onderzoeksvraag wordt verder opgesplitst in de volgende deelvragen:
+\begin{itemize}
+    \item Welke technische architectuur is geschikt om e-mails automatisch te laten samenvatten via een cloudgebaseerd AI-model?
+    \item In welke mate is het GPT-4o-mini model via Azure AI Foundry geschikt voor dit doeleinde?
+    \item Hoe kan de oplossing veilig geïntegreerd worden met aandacht voor API-sleutels en gevoelige gegevens?
+    \item Wat is de impact van automatische samenvatting op de verwerkingstijd van tickets?
+    \item Welke kosten zijn verbonden aan het gebruik van deze AI-oplossing op schaal?
+\end{itemize}
 
 \section{\IfLanguageName{dutch}{Onderzoeksdoelstelling}{Research objective}}%
 \label{sec:onderzoeksdoelstelling}
 
-Wat is het beoogde resultaat van je graduaatsproef? Wat zijn de criteria voor succes? Beschrijf die zo concreet mogelijk. Gaat het bv.\ om een proof-of-concept, een prototype, een verslag met aanbevelingen, een vergelijkende studie, enz.
+Het doel van deze graduaatsproef is het realiseren van een werkende proof-of-concept waarbij e-mails automatisch worden samengevat en toegevoegd aan tickets. De oplossing moet aantonen dat:
+
+\begin{itemize}
+    \item de integratie technisch haalbaar is binnen een realistische IT-omgeving;
+    \item de kwaliteit van ticketdocumentatie verbetert door duidelijkere en beknoptere samenvattingen;
+    \item de verwerkingstijd voor supportmedewerkers vermindert;
+    \item de oplossing kostenefficiënt is, ook bij grotere volumes van samenvattingen.
+\end{itemize}
+
+Succes wordt gemeten aan de hand van een correct werkende end-to-end flow (van e-mail tot samenvatting in het ticket), positieve evaluatie van de gegenereerde samenvattingen en een realistische kostenraming.
 
 \section{\IfLanguageName{dutch}{Opzet van deze graduaatsproef}{Structure of this associate thesis}}%
 \label{sec:opzet-graduaatsproef}
 
-% Het is gebruikelijk aan het einde van de inleiding een overzicht te
-% geven van de opbouw van de rest van de tekst. Deze sectie bevat al een aanzet
-% die je kan aanvullen/aanpassen in functie van je eigen tekst.
+De rest van deze graduaatsproef is als volgt opgebouwd.
 
-De rest van deze graduaatsproef is als volgt opgebouwd:
+In Hoofdstuk~\ref{ch:standvanzaken} wordt een overzicht gegeven van de stand van zaken rond ticketing, e-mailverwerking en automatische tekstsamenvatting met behulp van artificiële intelligentie.
 
-In Hoofdstuk~\ref{ch:stand-van-zaken} wordt een overzicht gegeven van de stand van zaken binnen het onderzoeksdomein, op basis van een literatuurstudie.
+In Hoofdstuk~\ref{ch:methodologie} wordt de gevolgde aanpak toegelicht en worden de gebruikte methodes besproken om tot een oplossing te komen.
 
-In Hoofdstuk~\ref{ch:methodologie} wordt de methodologie toegelicht en worden de gebruikte onderzoekstechnieken besproken om een antwoord te kunnen formuleren op de onderzoeksvragen.
+In de daaropvolgende hoofdstukken worden het ontwerp en de technische implementatie van de oplossing beschreven, inclusief de integratie met Azure AI Foundry, de backend Web API en de frontend testomgeving.
 
-% TODO: Vul hier aan voor je eigen hoofstukken, één of twee zinnen per hoofdstuk
+Vervolgens worden in het hoofdstuk over testen de resultaten van de uitgevoerde validaties besproken, gevolgd door een kostenanalyse waarin de financiële haalbaarheid van de oplossing wordt geëvalueerd.
 
-In Hoofdstuk~\ref{ch:conclusie}, tenslotte, wordt de conclusie gegeven en een antwoord geformuleerd op de onderzoeksvragen. Daarbij wordt ook een aanzet gegeven voor toekomstig onderzoek binnen dit domein.
+In Hoofdstuk~\ref{ch:conclusie}, tenslotte, wordt de conclusie geformuleerd en een antwoord gegeven op de onderzoeksvragen. Daarbij wordt ook een aanzet gegeven voor toekomstig werk en mogelijke uitbreidingen van de oplossing.

@@ -5,26 +5,53 @@
 \chapter{\IfLanguageName{dutch}{Methodologie}{Methodology}}%
 \label{ch:methodologie}
 
-%% TODO: In dit hoofstuk geef je een korte toelichting over hoe je te werk bent
-%% gegaan. Verdeel je onderzoek in grote fasen, en licht in elke fase toe wat
-%% de doelstelling was, welke deliverables daar uit gekomen zijn, en welke
-%% onderzoeksmethoden je daarbij toegepast hebt. Verantwoord waarom je
-%% op deze manier te werk gegaan bent.
-%% 
-%% Voorbeelden van zulke fasen zijn: literatuurstudie, opstellen van een
-%% requirements-analyse, opstellen long-list (bij vergelijkende studie),
-%% selectie van geschikte tools (bij vergelijkende studie, "short-list"),
-%% opzetten testopstelling/PoC, uitvoeren testen en verzamelen
-%% van resultaten, analyse van resultaten, ...
-%%
-%% !!!!! LET OP !!!!!
-%%
-%% Het is uitdrukkelijk NIET de bedoeling dat je het grootste deel van de corpus
-%% van je graduaatsproef in dit hoofstuk verwerkt! Dit hoofdstuk is eerder een
-%% kort overzicht van je plan van aanpak.
-%%
-%% Maak voor elke fase (behalve het literatuuronderzoek) een NIEUW HOOFDSTUK aan
-%% en geef het een gepaste titel.
+In dit hoofdstuk wordt toegelicht welke aanpak werd gevolgd bij het uitvoeren van deze graduaatsproef. De focus ligt op een praktijkgerichte methodologie, waarbij een concrete technische oplossing werd uitgewerkt, getest en geëvalueerd. Dit hoofdstuk beschrijft niet de volledige technische uitwerking, maar geeft een overzicht van de verschillende fasen en de bijhorende doelstellingen.
 
-\lipsum[21-25]
+\section{Onderzoeksstrategie}
+
+De graduaatsproef volgt een ontwerpgerichte onderzoeksstrategie. Dit betekent dat het onderzoek niet louter beschrijvend is, maar gericht op het ontwikkelen van een werkbare oplossing voor een concreet probleem uit de praktijk. De centrale onderzoeksvraag wordt beantwoord door het realiseren van een proof-of-concept en het evalueren van de werking ervan in een realistische context.
+
+\section{Fasering van het onderzoek}
+
+Het onderzoek werd opgedeeld in zes opeenvolgende fasen. Elke fase heeft een duidelijke doelstelling en bijhorende output.
+
+\subsection{Analysefase}
+
+In deze fase werd de bestaande ticketflow geanalyseerd, met bijzondere aandacht voor de manier waarop e-mails momenteel aan tickets worden gekoppeld. Het doel was om de belangrijkste knelpunten te identificeren, zoals het gebrek aan structuur in ticketbeschrijvingen en de tijd die nodig is om e-mailverkeer manueel te interpreteren.
+
+\textbf{Deliverable:} overzicht van het probleemdomein en afbakening van de scope.
+
+\subsection{Literatuur- en technologieverkenning}
+
+Vervolgens werd nagegaan welke bestaande technologieën beschikbaar zijn voor automatische tekstsamenvatting. Hierbij werd zowel gekeken naar academische inzichten als naar praktische cloudoplossingen. Op basis hiervan werd gekozen voor het gebruik van het GPT-4o-mini model via Azure AI Foundry, omwille van de balans tussen performantie en kostprijs.
+
+\textbf{Deliverable:} onderbouwde keuze van technologie en platform.
+
+\subsection{Ontwerpfase}
+
+In de ontwerpfase werd de architectuur van de oplossing uitgewerkt. Hierbij werd bepaald hoe de verschillende componenten met elkaar communiceren: de tickettool, de backend Web API, het AI-model in Azure en de frontend testomgeving. Ook aspecten zoals beveiliging van API-sleutels en configuratiebeheer werden in deze fase vastgelegd.
+
+\textbf{Deliverable:} technisch ontwerp van de oplossing en datastromen.
+
+\subsection{Implementatiefase}
+
+Tijdens de implementatiefase werd het ontwerp omgezet in een werkende oplossing. Er werd een backend Web API opgezet die e-mailinhoud extraheert en doorstuurt naar het AI-model. De configuratie werd veilig beheerd via user secrets. Daarnaast werd een eenvoudige frontend ontwikkeld met React (Vite) om de volledige flow te kunnen testen en demonstreren.
+
+\textbf{Deliverable:} werkende proof-of-concept met volledige end-to-end flow.
+
+\subsection{Testfase}
+
+De oplossing werd getest met behulp van Postman en verschillende praktijkscenario’s. Zowel functionele tests als eenvoudige performantie- en foutafhandelingstests werden uitgevoerd. De focus lag op de kwaliteit van de gegenereerde samenvattingen en de stabiliteit van de integratie.
+
+\textbf{Deliverable:} testresultaten en evaluatie van de werking.
+
+\subsection{Evaluatie- en rapportagefase}
+
+Tot slot werden de resultaten geanalyseerd en werd een kostenraming opgesteld op basis van het aantal samenvattingen per dag. De bevindingen werden verwerkt in dit rapport, samen met conclusies en aanbevelingen voor verdere optimalisatie en toekomstig gebruik.
+
+\textbf{Deliverable:} eindrapport met conclusie en toekomstperspectief.
+
+\section{Verantwoording van de aanpak}
+
+De gekozen aanpak sluit nauw aan bij het karakter van een graduaatsproef in het domein Programmeren. Door te werken met een concrete case en een tastbaar eindproduct wordt niet alleen de technische haalbaarheid onderzocht, maar ook de praktische meerwaarde voor een echte werkomgeving. Deze methodologie laat toe om de onderzoeksvraag niet alleen theoretisch, maar ook empirisch te beantwoorden aan de hand van een werkende oplossing.
 

@@ -1,51 +1,41 @@
 \chapter{\IfLanguageName{dutch}{Stand van zaken}{State of the art}}%
-\label{ch:stand-van-zaken}
+\label{ch:standvanzaken}
 
-% Tip: Begin elk hoofdstuk met een paragraaf inleiding die beschrijft hoe
-% dit hoofdstuk past binnen het geheel van de graduaatsproef. Geef in het
-% bijzonder aan wat de link is met het vorige en volgende hoofdstuk.
+Dit hoofdstuk bouwt verder op de inleiding en plaatst de graduaatsproef in een bredere context. Waar in het vorige hoofdstuk het probleem en de doelstelling werden geschetst, focust dit hoofdstuk op de bestaande kennis en ontwikkelingen binnen het domein van ticketing, e-mailverwerking en automatische tekstsamenvatting met behulp van artificiële intelligentie. Deze stand van zaken vormt de theoretische basis voor de keuzes die in het volgende hoofdstuk, de methodologie, worden toegelicht.
 
-% Pas na deze inleidende paragraaf komt de eerste sectiehoofding.
+\section{Ticketing in IT-ondersteuning}
 
-Dit hoofdstuk bevat je literatuurstudie. De inhoud gaat verder op de inleiding, maar zal het onderwerp van de graduaatsproef *diepgaand* uitspitten. De bedoeling is dat de lezer na lezing van dit hoofdstuk helemaal op de hoogte is van de huidige stand van zaken (state-of-the-art) in het onderzoeksdomein. Iemand die niet vertrouwd is met het onderwerp, weet nu voldoende om de rest van het verhaal te kunnen volgen, zonder dat die er nog andere informatie moet over opzoeken \autocite{Pollefliet2011}.
+Ticketsystemen zijn een essentieel onderdeel van moderne IT-ondersteuning. Ze worden gebruikt om incidenten, service requests en veranderingen te registreren en op te volgen. Naast hun operationele functie spelen tickets ook een belangrijke rol in rapportering, SLA-opvolging en kennisbeheer \autocite{Pollefliet2011}. 
 
-Je verwijst bij elke bewering die je doet, vakterm die je introduceert, enz.\ naar je bronnen. In \LaTeX{} kan dat met het commando \texttt{$\backslash${textcite\{\}}} of \texttt{$\backslash${autocite\{\}}}. Als argument van het commando geef je de ``sleutel'' van een ``record'' in een bibliografische databank in het Bib\LaTeX{}-formaat (een tekstbestand). Als je expliciet naar de auteur verwijst in de zin (narratieve referentie), gebruik je \texttt{$\backslash${}textcite\{\}}. Soms is de auteursnaam niet expliciet een onderdeel van de zin, dan gebruik je \texttt{$\backslash${}autocite\{\}} (referentie tussen haakjes). Dit gebruik je bv.~bij een citaat, of om in het bijschrift van een overgenomen afbeelding, broncode, tabel, enz. te verwijzen naar de bron. In de volgende paragraaf een voorbeeld van elk.
+In de praktijk blijkt echter dat de kwaliteit van ticketinformatie sterk varieert. Wanneer tickets worden aangemaakt op basis van e-mailverkeer, wordt de inhoud vaak letterlijk overgenomen of als bijlage toegevoegd. Dit leidt tot lange, ongestructureerde ticketbeschrijvingen die moeilijk leesbaar zijn voor andere medewerkers. Onderzoek toont aan dat onduidelijke ticketinformatie een negatieve impact heeft op zowel de oplostijd als de klanttevredenheid \autocite{Creeger2009}.
 
-\textcite{Knuth1998} schreef een van de standaardwerken over sorteer- en zoekalgoritmen. Experten zijn het erover eens dat cloud computing een interessante opportuniteit vormen, zowel voor gebruikers als voor dienstverleners op vlak van informatietechnologie~\autocite{Creeger2009}.
+\section{E-mail als communicatiekanaal}
 
-Let er ook op: het \texttt{cite}-commando voor de punt, dus binnen de zin. Je verwijst meteen naar een bron in de eerste zin die erop gebaseerd is, dus niet pas op het einde van een paragraaf.
+Ondanks de opkomst van chat- en portaaloplossingen blijft e-mail één van de belangrijkste communicatiekanalen tussen eindgebruikers en IT-servicedesks. Gebruikers beschrijven hun probleem vaak in meerdere berichten, soms verspreid over meerdere dagen. Hierdoor ontstaat een versnipperde informatiestroom die voor supportmedewerkers moeilijk te overzien is.
 
-\begin{figure}
-  \centering
-  \includegraphics[width=0.8\textwidth]{grail.jpg}
-  \caption[Voorbeeld figuur.]{\label{fig:grail}Voorbeeld van invoegen van een figuur. Zorg altijd voor een uitgebreid bijschrift dat de figuur volledig beschrijft zonder in de tekst te moeten gaan zoeken. Vergeet ook je bronvermelding niet!}
-\end{figure}
+Het manueel samenvatten van deze communicatie vraagt tijd en concentratie. Bovendien is de kwaliteit van handmatige samenvattingen sterk afhankelijk van de ervaring en werkdruk van de medewerker. Dit kan leiden tot inconsistente documentatie, wat nadelig is voor samenwerking binnen het team en voor latere hergebruik in een knowledge base.
 
-\begin{listing}
-  \begin{minted}{python}
-    import pandas as pd
-    import seaborn as sns
+\section{Automatische tekstsamenvatting}
 
-    penguins = sns.load_dataset('penguins')
-    sns.relplot(data=penguins, x="flipper_length_mm", y="bill_length_mm", hue="species")
-  \end{minted}
-  \caption[Voorbeeld codefragment]{Voorbeeld van het invoegen van een codefragment.}
-\end{listing}
+Automatische tekstsamenvatting is een belangrijk onderzoeksdomein binnen de natuurlijke taalverwerking. Traditioneel wordt een onderscheid gemaakt tussen extractieve en abstractieve samenvatting. Bij extractieve samenvatting worden belangrijke zinnen letterlijk uit de brontekst geselecteerd, terwijl abstractieve samenvatting nieuwe zinnen genereert die de kern van de tekst weergeven \autocite{Knuth1998}.
 
-\lipsum[7-20]
+Recente ontwikkelingen in deep learning, en meer specifiek in transformer-gebaseerde modellen, hebben geleid tot een sterke vooruitgang in abstractieve samenvatting. Deze modellen zijn in staat om de semantische betekenis van teksten te begrijpen en deze om te zetten in coherente en beknopte samenvattingen. Hierdoor zijn ze bijzonder geschikt voor toepassingen zoals e-mailsamenvatting in professionele contexten.
 
-\begin{table}
-  \centering
-  \begin{tabular}{lcr}
-    \toprule
-    \textbf{Kolom 1} & \textbf{Kolom 2} & \textbf{Kolom 3} \\
-    $\alpha$         & $\beta$          & $\gamma$         \\
-    \midrule
-    A                & 10.230           & a                \\
-    B                & 45.678           & b                \\
-    C                & 99.987           & c                \\
-    \bottomrule
-  \end{tabular}
-  \caption[Voorbeeld tabel]{\label{tab:example}Voorbeeld van een tabel.}
-\end{table}
+\section{AI-modellen in de cloud}
+
+Cloudplatformen zoals Microsoft Azure bieden organisaties de mogelijkheid om geavanceerde AI-modellen te gebruiken zonder zelf complexe infrastructuur te moeten beheren. Via diensten zoals Azure AI Foundry kunnen modellen eenvoudig worden gedeployed en aangesproken via API’s. Dit verlaagt de drempel voor integratie van artificiële intelligentie in bestaande bedrijfsprocessen.
+
+Een belangrijk voordeel van cloudgebaseerde AI is de schaalbaarheid. Organisaties kunnen het gebruik van AI aanpassen aan hun noden, zonder grote voorafgaande investeringen in hardware. Tegelijk brengt dit nieuwe aandachtspunten met zich mee, zoals dataveiligheid, privacy en kostenbeheersing. Deze aspecten zijn bijzonder relevant wanneer gevoelige informatie, zoals e-mailinhoud, verwerkt wordt.
+
+\section{AI in servicedesk-omgevingen}
+
+De toepassing van artificiële intelligentie in servicedesk-omgevingen is de afgelopen jaren sterk toegenomen. Voorbeelden zijn chatbots voor first-line support, automatische classificatie van tickets en voorspellende analyses voor incidentbeheer. Automatische samenvatting van e-mails sluit logisch aan bij deze evolutie en vormt een volgende stap in de automatisering van ondersteunende processen.
+
+Onderzoek wijst uit dat dergelijke toepassingen niet bedoeld zijn om medewerkers te vervangen, maar om hen te ondersteunen door repetitieve taken te automatiseren \autocite{Creeger2009}. Hierdoor kunnen supportmedewerkers zich focussen op complexere problemen en klantgerichte taken, wat de algemene kwaliteit van dienstverlening verhoogt.
+
+\section{Positionering van deze graduaatsproef}
+
+Binnen dit bredere kader positioneert deze graduaatsproef zich op het snijvlak van ticketing, e-mailverwerking en cloudgebaseerde AI. Door gebruik te maken van het GPT-4o-mini model via Azure AI Foundry wordt onderzocht hoe automatische samenvatting praktisch kan worden geïntegreerd in een bestaande ticketflow.
+
+In tegenstelling tot louter theoretisch onderzoek focust deze graduaatsproef op een concrete implementatie in een realistische context. De literatuurstudie toont aan dat de gebruikte technologieën voldoende matuur zijn om ingezet te worden in productieomgevingen. Dit vormt de basis voor de methodologische keuzes die in het volgende hoofdstuk worden besproken.
 

@@ -2,47 +2,39 @@
 %% Samenvatting
 %%=============================================================================
 
-% TODO: De "abstract" of samenvatting is een kernachtige (~ 1 blz. voor een
-% thesis) synthese van het document.
-%
-% Een goede abstract biedt een kernachtig antwoord op volgende vragen:
-%
-% 1. Waarover gaat de graduaatsproef?
-% 2. Waarom heb je er over geschreven?
-% 3. Hoe heb je het onderzoek uitgevoerd?
-% 4. Wat waren de resultaten? Wat blijkt uit je onderzoek?
-% 5. Wat betekenen je resultaten? Wat is de relevantie voor het werkveld?
-%
-% Daarom bestaat een abstract uit volgende componenten:
-%
-% - inleiding + kaderen thema
-% - probleemstelling
-% - (centrale) onderzoeksvraag
-% - onderzoeksdoelstelling
-% - methodologie
-% - resultaten (beperk tot de belangrijkste, relevant voor de onderzoeksvraag)
-% - conclusies, aanbevelingen, beperkingen
-%
-% LET OP! Een samenvatting is GEEN voorwoord!
-
 %%---------- Nederlandse samenvatting -----------------------------------------
-%
-% TODO: Als je je graduaatsproef in het Engels schrijft, moet je eerst een
-% Nederlandse samenvatting invoegen. Haal daarvoor onderstaande code uit
-% commentaar.
-% Wie zijn/haar graduaatsproef in het Nederlands schrijft, kan dit negeren, de inhoud
-% wordt niet in het document ingevoegd.
 
 \IfLanguageName{english}{%
 \selectlanguage{dutch}
 \chapter*{Samenvatting}
-\lipsum[1-4]
+
+Deze graduaatsproef behandelt de integratie van automatische e-mailsamenvatting in een ticketingsysteem met behulp van artificiële intelligentie via Microsoft Azure. In veel IT-servicedesk-omgevingen worden tickets aangemaakt op basis van e-mailverkeer, waarbij belangrijke informatie vaak ongestructureerd of onvolledig wordt overgenomen. Dit leidt tot tijdverlies en verhoogt de kans op fouten bij de analyse en opvolging van tickets.
+
+Het doel van deze graduaatsproef is na te gaan hoe e-mails automatisch kunnen worden samengevat en toegevoegd aan tickets, en welke meerwaarde dit biedt op vlak van efficiëntie, kwaliteit en kosteneffectiviteit. De centrale onderzoeksvraag luidt hoe automatische samenvatting van e-mails met behulp van AI technisch kan worden geïntegreerd in een bestaande ticketflow en in welke mate deze oplossing bijdraagt tot een betere werking van de servicedesk.
+
+De gekozen methodologie is praktijkgericht en focust op het ontwikkelen van een proof-of-concept. Hiervoor werd gebruikgemaakt van het GPT-4o-mini model via Azure AI Foundry. Een backend Web API werd ontwikkeld om e-mailinhoud te verwerken en door te sturen naar het AI-model. Gevoelige configuratiegegevens, zoals API-sleutels, worden veilig beheerd via user secrets. Daarnaast werd een eenvoudige frontend opgezet met React (Vite) om de volledige flow te demonstreren en te testen. De oplossing werd gevalideerd met behulp van Postman en end-to-end tests.
+
+De resultaten tonen aan dat automatische e-mailsamenvatting technisch haalbaar is en een duidelijke meerwaarde biedt voor IT-supportomgevingen. Supportmedewerkers krijgen sneller inzicht in de kern van een probleem, wat de analysetijd verkort en bijdraagt tot een efficiëntere ticketafhandeling. Bovendien zorgt de oplossing voor een betere kwaliteit van ticketdocumentatie, wat ook de bruikbaarheid van tickets als kennisbron verhoogt.
+
+De kostenanalyse wijst uit dat het gebruik van een cloudgebaseerd AI-model voor deze toepassing financieel haalbaar blijft, zelfs bij een relatief hoog aantal samenvattingen per dag. Hierdoor vormt de oplossing niet alleen een technisch, maar ook een economisch verantwoorde keuze.
+
+Samenvattend kan gesteld worden dat automatische samenvatting van e-mails met behulp van artificiële intelligentie een waardevolle aanvulling vormt voor moderne ticketingsystemen. De gerealiseerde proof-of-concept biedt een stevige basis voor verdere ontwikkeling en mogelijke implementatie in productieomgevingen, met duidelijke voordelen voor zowel supportmedewerkers als organisaties.
+
 \selectlanguage{english}
 }{}
 
 %%---------- Samenvatting -----------------------------------------------------
-% De samenvatting in de hoofdtaal van het document
 
 \chapter*{\IfLanguageName{dutch}{Samenvatting}{Abstract}}
 
-\lipsum[1-4]
+Deze graduaatsproef behandelt de integratie van automatische e-mailsamenvatting in een ticketingsysteem met behulp van artificiële intelligentie via Microsoft Azure. In veel IT-servicedesk-omgevingen worden tickets aangemaakt op basis van e-mailverkeer, waarbij belangrijke informatie vaak ongestructureerd of onvolledig wordt overgenomen. Dit leidt tot tijdverlies en verhoogt de kans op fouten bij de analyse en opvolging van tickets.
+
+Het doel van deze graduaatsproef is na te gaan hoe e-mails automatisch kunnen worden samengevat en toegevoegd aan tickets, en welke meerwaarde dit biedt op vlak van efficiëntie, kwaliteit en kosteneffectiviteit. De centrale onderzoeksvraag luidt hoe automatische samenvatting van e-mails met behulp van AI technisch kan worden geïntegreerd in een bestaande ticketflow en in welke mate deze oplossing bijdraagt tot een betere werking van de servicedesk.
+
+De gekozen methodologie is praktijkgericht en focust op het ontwikkelen van een proof-of-concept. Hiervoor werd gebruikgemaakt van het GPT-4o-mini model via Azure AI Foundry. Een backend Web API werd ontwikkeld om e-mailinhoud te verwerken en door te sturen naar het AI-model. Gevoelige configuratiegegevens, zoals API-sleutels, worden veilig beheerd via user secrets. Daarnaast werd een eenvoudige frontend opgezet met React (Vite) om de volledige flow te demonstreren en te testen. De oplossing werd gevalideerd met behulp van Postman en end-to-end tests.
+
+De resultaten tonen aan dat automatische e-mailsamenvatting technisch haalbaar is en een duidelijke meerwaarde biedt voor IT-supportomgevingen. Supportmedewerkers krijgen sneller inzicht in de kern van een probleem, wat de analysetijd verkort en bijdraagt tot een efficiëntere ticketafhandeling. Bovendien zorgt de oplossing voor een betere kwaliteit van ticketdocumentatie, wat ook de bruikbaarheid van tickets als kennisbron verhoogt.
+
+De kostenanalyse wijst uit dat het gebruik van een cloudgebaseerd AI-model voor deze toepassing financieel haalbaar blijft, zelfs bij een relatief hoog aantal samenvattingen per dag. Hierdoor vormt de oplossing niet alleen een technisch, maar ook een economisch verantwoorde keuze.
+
+Samenvattend kan gesteld worden dat automatische samenvatting van e-mails met behulp van artificiële intelligentie een waardevolle aanvulling vormt voor moderne ticketingsystemen. De gerealiseerde proof-of-concept biedt een stevige basis voor verdere ontwikkeling en mogelijke implementatie in productieomgevingen, met duidelijke voordelen voor zowel supportmedewerkers als organisaties.

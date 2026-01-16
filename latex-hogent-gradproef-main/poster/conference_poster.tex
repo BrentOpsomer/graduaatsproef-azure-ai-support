@@ -1,86 +1,57 @@
 %==============================================================================
-% Sjabloon poster bachproef
+% Poster graduaatsproef
 %==============================================================================
-% Gebaseerd op document class `a0poster' door Gerlinde Kettl en Matthias Weiser
-% Aangepast voor gebruik aan HOGENT door Jens Buysse en Bert Van Vreckem
 
 \documentclass[a0,portrait]{hogent-poster}
 
 % Info over de opleiding
 \course{Graduaatsproef}
 \studyprogramme{Graduaat in het Programmeren}
-\academicyear{2022-2023}
+\academicyear{2025-2026}
 \institution{Hogeschool Gent, Valentin Vaerwyckweg 1, 9000 Gent}
 
-% Info over de bachelorproef
-\title{Titel van je graduaatsproef}
-\subtitle{Ondertitel (eventueel)}
-\author{Voornaam Naam}
-\email{voornaam.familienaam@student.hogent.be}
-\supervisor{Voornaam Naam}
-\cosupervisor{Voornaam Naam (Bedrijf)}
+% Info over de graduaatsproef
+\title{Automatische samenvatting van support-e-mails met Azure AI}
+\subtitle{Proof of Concept voor toekomstige integratie in een supportomgeving}
+\author{Brent Opsomer}
+\email{brent.opsomer@student.hogent.be}
+\supervisor{Luc Vervoort}
+\cosupervisor{Kris Van Achter (bedrijf)}
 
-% Indien ingevuld, wordt deze informatie toegevoegd aan het einde van de
-% abstract. Zet in commentaar als je dit niet wilt.
 \specialisation{Programmeren}
-\keywords{Lambda-calculus, Scheme}
-\projectrepo{https://github.com/user/repo}
+\keywords{Azure OpenAI, GPT-4o-mini, Support, Automatisatie}
+% \projectrepo{https://github.com/BrentOpsomer/graduaatsproef-azure-ai-support}
 
 \begin{document}
 
 \maketitle
 
 \begin{abstract}
-It's only a model.
-You don't vote for kings. Who's that then? We found them. Ni! Ni! Ni! Ni!
-The nose? On second thoughts, let's not go there. It is a silly place. Bloody Peasant! And the hat. She's a witch! Where'd you get the coconuts?
+Supportmedewerkers verwerken dagelijks tickets die vaak bestaan uit lange en ongestructureerde e-mailconversaties. Het manueel samenvatten van deze informatie is tijdrovend en leidt tot inconsistente documentatie. In deze graduaatsproef wordt een proof of concept uitgewerkt die gebruikmaakt van Azure OpenAI om automatisch kernachtige samenvattingen te genereren van support-e-mails. De oplossing werd ontwikkeld als een afzonderlijke demo-applicatie en toont aan hoe artificiële intelligentie kan bijdragen tot efficiëntere ticketafhandeling en betere kennisopbouw binnen supportteams.
 \end{abstract}
 
-\begin{multicols}{2} % This is how many columns your poster will be broken into, a portrait poster is generally split into 2 columns
+\begin{multicols}{2}
 
 \section{Introductie}
+Binnen moderne IT-supportomgevingen worden e-mails vaak rechtstreeks omgezet in tickets. Deze berichten bevatten echter niet altijd gestructureerde informatie en zijn soms uitgebreid of herhalend. Hierdoor gaat waardevolle tijd verloren aan het interpreteren en samenvatten van de kern van het probleem. Een geautomatiseerde aanpak kan deze administratieve last aanzienlijk verminderen en de kwaliteit van ticketdocumentatie verhogen.
 
-Be quiet! Found them? In Mercia?! The coconut's tropical! But you are dressed as one… Well, what do you want? Knights of Ni, we are but simple travelers who seek the enchanter who lives beyond these woods.
+\section{Doelstelling}
+Het doel van deze graduaatsproef is het ontwikkelen van een proof of concept die aantoont hoe AI-technologie ingezet kan worden om support-e-mails automatisch samen te vatten. De focus ligt op het creëren van een realistische en uitbreidbare oplossing die later eenvoudig geïntegreerd kan worden in een bestaande supporttool.
 
-Well, what do you want? It's only a model. Camelot! We found them. We shall say `Ni' again to you, if you do not appease us.
+\section{Aanpak}
+De proof of concept bestaat uit een demo-applicatie waarbij de gebruiker een support-e-mail selecteert of invoert. Deze e-mail wordt doorgestuurd naar een .NET-backend die communiceert met Azure OpenAI. Het gekozen model, \textbf{GPT-4o-mini}, genereert vervolgens een beknopte en professionele samenvatting. Deze wordt in de gebruikersinterface weergegeven en kan in een latere fase automatisch aan een ticket worden toegevoegd.
 
-The nose? Shut up! Burn her! I am your king. You don't vote for kings.
+\section{Architectuur}
+De architectuur is bewust modulair opgezet en bestaat uit drie componenten: een React-frontend, een .NET minimal API-backend en de Azure OpenAI Service. De backend fungeert als centrale schakel en verzorgt de beveiliging, validatie en communicatie met het AI-model. Deze opzet maakt het mogelijk om de oplossing later zonder grote aanpassingen te integreren in bestaande systemen.
 
-You can't expect to wield supreme power just `cause some watery tart threw a sword at you! Well, we did do the nose. I don't want to talk to you no more, you empty-headed animal food trough water! I fart in your general direction! Your mother was a hamster and your father smelt of elderberries! Now leave before I am forced to taunt you a second time!
+\section{Resultaten}
+De proof of concept toont aan dat Azure OpenAI in staat is om lange support-e-mails snel en accuraat samen te vatten. De gegenereerde samenvattingen zijn duidelijk, consistent en direct bruikbaar in een ticketsysteem. Dit leidt tot een betere leesbaarheid van tickets en ondersteunt snellere probleemanalyse door supportmedewerkers.
 
-Why do you think that she is a witch? We want a shrubbery!! I don't want to talk to you no more, you empty-headed animal food trough water! I fart in your general direction! Your mother was a hamster and your father smelt of elderberries! Now leave before I am forced to taunt you a second time!
+\section{Conclusie}
+Deze graduaatsproef bevestigt dat artificiële intelligentie een meerwaarde kan bieden binnen IT-supportprocessen. Door het automatiseren van samenvattingen wordt niet alleen tijd gewonnen, maar wordt ook de kwaliteit van documentatie verhoogd. De ontwikkelde proof of concept vormt een solide basis voor verdere implementatie in een productieomgeving.
 
-\section{Experimenten}
-
-A newt? Camelot! Why? No, no, no! Yes, yes. A bit. But she's got a wart.
-
-Shut up! I dunno. Must be a king. Who's that then? Look, my liege! On second thoughts, let's not go there. It is a silly place.
-
-Shut up! Will you shut up?! No, no, no! Yes, yes. A bit. But she's got a wart. He hasn't got shit all over him. It's only a model. It's only a model.
-
-Bring her forward! I don't want to talk to you no more, you empty-headed animal food trough water! I fart in your general direction! Your mother was a hamster and your father smelt of elderberries! Now leave 
-
-\section{Sectie met figuur}
-
-De {\LaTeX} figure-omgeving bepaalt zelf waar een afbeelding komt en dat is meestal niet op de plek in de tekst waar de figure-omgeving gedefinieerd wordt. Als je wilt forceren dat afbeeldingen toch in de flow van de tekst blijven, dan kan je dat zoals hieronder:
-
-\begin{center}
-  \captionsetup{type=figure}
-  \includegraphics[width=1.0\linewidth]{grail}
-  \captionof{figure}{He hasn't got shit all over him. The nose? Where'd you get the coconuts? What do you mean? We shall say `Ni' again to you, if you do not appease us}
-\end{center}
-
-Let er wel op dat dit tot problemen met bladschikking kan leiden.
-
-\section{Conclusies}
-
-Don't underestimate the Force. Oh God, my uncle. How am I ever gonna explain this? I suggest you try it again, Luke. This time, let go your conscious self and act on instinct. Don't be too proud of this technological terror you've constructed. The ability to destroy a planet is insignificant next to the power of the Force.
-
-\section{Toekomstig onderzoek}
-
-I care. So, what do you think of her, Han? No! Alderaan is peaceful. We have no weapons. You can't possibly… I have traced the Rebel spies to her. Now she is my only link to finding their secret base.
-
-Kid, I've flown from one side of this galaxy to the other. I've seen a lot of strange stuff, but I've never seen anything to make me believe there's one all-powerful Force controlling everything. There's no mystical energy field that controls my destiny. It's all a lot of simple tricks and nonsense. You are a part of the Rebel Alliance and a traitor! Take her away! 
+\section{Toekomstig werk}
+Mogelijke uitbreidingen omvatten de integratie in een bestaande supporttool, automatische classificatie van tickets, sentimentanalyse en koppeling met een knowledge base. Daarnaast kunnen extra veiligheidsmaatregelen worden toegevoegd, zoals PII-detectie, logging en strengere contentfilters.
 
 \end{multicols}
 \end{document}

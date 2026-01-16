@@ -1,0 +1,6 @@
+@AiSummarizeApi_HostAddress = http://localhost:5111
+
+GET {{AiSummarizeApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

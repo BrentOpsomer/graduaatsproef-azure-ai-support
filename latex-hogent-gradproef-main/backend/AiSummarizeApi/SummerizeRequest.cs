@@ -1,0 +1,1 @@
+record SummarizeRequest(string EmailText);
