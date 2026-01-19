@@ -9,14 +9,14 @@ Binnen IT-ondersteuning en servicedesk-omgevingen vormen tickets de kern van de 
 
 Supportmedewerkers moeten hierdoor vaak eerst verschillende berichten doornemen om een goed beeld te krijgen van het probleem. Dit is tijdrovend en verhoogt de kans op misinterpretatie of het missen van belangrijke details. Zeker in omgevingen waar dagelijks tientallen tot honderden tickets verwerkt worden, leidt dit tot een merkbare impact op efficiëntie en kwaliteit van dienstverlening.
 
-De snelle evolutie van artificiële intelligentie, en meer bepaald van natuurlijke taalverwerking, biedt nieuwe mogelijkheden om deze problematiek aan te pakken. Moderne AI-modellen zijn in staat om teksten automatisch samen te vatten, waarbij de essentie behouden blijft. Door deze technologie te integreren in bestaande ticketflows kan een deel van het repetitieve manuele werk worden geautomatiseerd.
+De snelle evolutie van artificiële intelligentie, en meer bepaald van natuurlijke taalverwerking, biedt nieuwe mogelijkheden om deze problematiek aan te pakken. Moderne AI-modellen zijn in staat om teksten automatisch samen te vatten, waarbij de essentie behouden blijft. Door deze technologie toe te passen binnen de context van supportprocessen kan een deel van het repetitieve manuele werk worden verminderd.
 
-Deze graduaatsproef onderzoekt de mogelijkheid om e-mails die gekoppeld worden aan nieuwe tickets automatisch te laten samenvatten met behulp van een AI-model via Microsoft Azure. De gegenereerde samenvatting wordt toegevoegd aan het ticket, zodat supportmedewerkers sneller inzicht krijgen in de context van het probleem en efficiënter kunnen werken.
+Deze graduaatsproef onderzoekt de mogelijkheid om e-mails, zoals die typisch voorkomen in ticketgebaseerde supportomgevingen, automatisch te laten samenvatten met behulp van een AI-model via Microsoft Azure. De gegenereerde samenvatting wordt weergegeven binnen een proof-of-concept, met als doel de potentiële meerwaarde van automatische e-mailsamenvatting voor supportmedewerkers te evalueren.
 
 \section{\IfLanguageName{dutch}{Probleemstelling}{Problem Statement}}%
 \label{sec:probleemstelling}
 
-Binnen de huidige ticketflow worden e-mails vaak integraal toegevoegd aan tickets zonder verdere structurering. Dit resulteert in lange en soms onoverzichtelijke ticketbeschrijvingen. Supportmedewerkers moeten hierdoor extra tijd besteden aan het lezen en interpreteren van de inhoud voordat ze tot actie kunnen overgaan.
+Binnen de huidige ticketwerking worden e-mails vaak integraal toegevoegd aan tickets zonder verdere structurering. Dit resulteert in lange en soms onoverzichtelijke ticketbeschrijvingen. Supportmedewerkers moeten hierdoor extra tijd besteden aan het lezen en interpreteren van de inhoud voordat ze tot actie kunnen overgaan.
 
 De concrete doelgroep van deze graduaatsproef bestaat uit:
 \begin{itemize}
@@ -25,7 +25,7 @@ De concrete doelgroep van deze graduaatsproef bestaat uit:
     \item IT-organisaties die hun ticketdocumentatie willen verbeteren met het oog op kennisbeheer.
 \end{itemize}
 
-Voor deze doelgroep vormt de huidige manier van werken een rem op efficiëntie en kwaliteit. Er is nood aan een oplossing die automatisch de essentie uit e-mails filtert en deze gestructureerd toevoegt aan het ticket, zonder dat dit extra werk vraagt van de medewerkers.
+Voor deze doelgroep vormt de huidige manier van werken een rem op efficiëntie en kwaliteit. Er is nood aan een oplossing die automatisch de essentie uit e-mails kan filteren en samenvatten, zonder dat dit extra manueel werk vraagt van de medewerkers.
 
 \section{\IfLanguageName{dutch}{Onderzoeksvraag}{Research question}}%
 \label{sec:onderzoeksvraag}
@@ -33,31 +33,31 @@ Voor deze doelgroep vormt de huidige manier van werken een rem op efficiëntie e
 De centrale onderzoeksvraag van deze graduaatsproef luidt als volgt:
 
 \begin{quote}
-Hoe kan automatische samenvatting van e-mails met behulp van AI geïntegreerd worden in een ticketingsysteem, en welke meerwaarde biedt dit op vlak van efficiëntie, kwaliteit en kost?
+Hoe kan automatische samenvatting van e-mails met behulp van AI worden gerealiseerd binnen de context van een ticketingsysteem, en welke potentiële meerwaarde biedt dit op vlak van efficiëntie, kwaliteit en kost?
 \end{quote}
 
 Deze onderzoeksvraag wordt verder opgesplitst in de volgende deelvragen:
 \begin{itemize}
     \item Welke technische architectuur is geschikt om e-mails automatisch te laten samenvatten via een cloudgebaseerd AI-model?
     \item In welke mate is het GPT-4o-mini model via Azure AI Foundry geschikt voor dit doeleinde?
-    \item Hoe kan de oplossing veilig geïntegreerd worden met aandacht voor API-sleutels en gevoelige gegevens?
-    \item Wat is de impact van automatische samenvatting op de verwerkingstijd van tickets?
+    \item Hoe kan de oplossing veilig worden opgezet met aandacht voor API-sleutels en gevoelige gegevens?
+    \item Wat is de potentiële impact van automatische e-mailsamenvatting op de verwerkingstijd van supportvragen?
     \item Welke kosten zijn verbonden aan het gebruik van deze AI-oplossing op schaal?
 \end{itemize}
 
 \section{\IfLanguageName{dutch}{Onderzoeksdoelstelling}{Research objective}}%
 \label{sec:onderzoeksdoelstelling}
 
-Het doel van deze graduaatsproef is het realiseren van een werkende proof-of-concept waarbij e-mails automatisch worden samengevat en toegevoegd aan tickets. De oplossing moet aantonen dat:
+Het doel van deze graduaatsproef is het realiseren van een werkende proof-of-concept waarbij e-mails automatisch worden samengevat en de gegenereerde samenvattingen worden weergegeven in een demo-omgeving. De oplossing moet aantonen dat:
 
 \begin{itemize}
-    \item de integratie technisch haalbaar is binnen een realistische IT-omgeving;
-    \item de kwaliteit van ticketdocumentatie verbetert door duidelijkere en beknoptere samenvattingen;
-    \item de verwerkingstijd voor supportmedewerkers vermindert;
-    \item de oplossing kostenefficiënt is, ook bij grotere volumes van samenvattingen.
+    \item automatische e-mailsamenvatting technisch haalbaar is binnen een realistische IT-context;
+    \item de gegenereerde samenvattingen voldoende duidelijk en bruikbaar zijn;
+    \item de oplossing het potentieel heeft om tijdswinst op te leveren voor supportmedewerkers;
+    \item de oplossing kostenefficiënt kan worden ingezet bij grotere volumes.
 \end{itemize}
 
-Succes wordt gemeten aan de hand van een correct werkende end-to-end flow (van e-mail tot samenvatting in het ticket), positieve evaluatie van de gegenereerde samenvattingen en een realistische kostenraming.
+Succes wordt gemeten aan de hand van een correct werkende end-to-end flow (van e-mailinvoer tot gegenereerde samenvatting), een inhoudelijke evaluatie van de samenvattingen en een realistische kostenraming.
 
 \section{\IfLanguageName{dutch}{Opzet van deze graduaatsproef}{Structure of this associate thesis}}%
 \label{sec:opzet-graduaatsproef}
@@ -66,10 +66,10 @@ De rest van deze graduaatsproef is als volgt opgebouwd.
 
 In Hoofdstuk~\ref{ch:standvanzaken} wordt een overzicht gegeven van de stand van zaken rond ticketing, e-mailverwerking en automatische tekstsamenvatting met behulp van artificiële intelligentie.
 
-In Hoofdstuk~\ref{ch:methodologie} wordt de gevolgde aanpak toegelicht en worden de gebruikte methodes besproken om tot een oplossing te komen.
+In Hoofdstuk~\ref{ch:methodologie} wordt de gevolgde aanpak toegelicht en worden de gebruikte methodes besproken om tot een proof-of-concept te komen.
 
-In de daaropvolgende hoofdstukken worden het ontwerp en de technische implementatie van de oplossing beschreven, inclusief de integratie met Azure AI Foundry, de backend Web API en de frontend testomgeving.
+In de daaropvolgende hoofdstukken worden het ontwerp en de technische implementatie van de oplossing beschreven, inclusief het gebruik van Azure AI Foundry, de backend Web API en de frontend testomgeving.
 
-Vervolgens worden in het hoofdstuk over testen de resultaten van de uitgevoerde validaties besproken, gevolgd door een kostenanalyse waarin de financiële haalbaarheid van de oplossing wordt geëvalueerd.
+Vervolgens worden de resultaten van de uitgevoerde tests besproken, gevolgd door een kostenanalyse waarin de financiële haalbaarheid van de oplossing wordt geëvalueerd.
 
 In Hoofdstuk~\ref{ch:conclusie}, tenslotte, wordt de conclusie geformuleerd en een antwoord gegeven op de onderzoeksvragen. Daarbij wordt ook een aanzet gegeven voor toekomstig werk en mogelijke uitbreidingen van de oplossing.

@@ -5,11 +5,11 @@
 \chapter{\IfLanguageName{dutch}{Methodologie}{Methodology}}%
 \label{ch:methodologie}
 
-In dit hoofdstuk wordt toegelicht welke aanpak werd gevolgd bij het uitvoeren van deze graduaatsproef. De focus ligt op een praktijkgerichte methodologie, waarbij een concrete technische oplossing werd uitgewerkt, getest en geëvalueerd. Dit hoofdstuk beschrijft niet de volledige technische uitwerking, maar geeft een overzicht van de verschillende fasen en de bijhorende doelstellingen.
+In dit hoofdstuk wordt toegelicht welke aanpak werd gevolgd bij het uitvoeren van deze graduaatsproef. De focus ligt op een praktijkgerichte methodologie, waarbij een concrete technische proof-of-concept werd uitgewerkt, getest en geëvalueerd. Dit hoofdstuk beschrijft niet de volledige technische implementatie in detail, maar geeft een overzicht van de verschillende fasen en de bijhorende doelstellingen.
 
 \section{Onderzoeksstrategie}
 
-De graduaatsproef volgt een ontwerpgerichte onderzoeksstrategie. Dit betekent dat het onderzoek niet louter beschrijvend is, maar gericht op het ontwikkelen van een werkbare oplossing voor een concreet probleem uit de praktijk. De centrale onderzoeksvraag wordt beantwoord door het realiseren van een proof-of-concept en het evalueren van de werking ervan in een realistische context.
+De graduaatsproef volgt een ontwerpgerichte onderzoeksstrategie. Dit betekent dat het onderzoek niet louter beschrijvend is, maar gericht op het ontwikkelen van een werkbare oplossing voor een concreet probleem uit de praktijk. De centrale onderzoeksvraag wordt benaderd door het realiseren van een proof-of-concept en het evalueren van de werking ervan binnen een realistische supportcontext.
 
 \section{Fasering van het onderzoek}
 
@@ -17,7 +17,7 @@ Het onderzoek werd opgedeeld in zes opeenvolgende fasen. Elke fase heeft een dui
 
 \subsection{Analysefase}
 
-In deze fase werd de bestaande ticketflow geanalyseerd, met bijzondere aandacht voor de manier waarop e-mails momenteel aan tickets worden gekoppeld. Het doel was om de belangrijkste knelpunten te identificeren, zoals het gebrek aan structuur in ticketbeschrijvingen en de tijd die nodig is om e-mailverkeer manueel te interpreteren.
+In deze fase werd de context van ticketgebaseerde supportomgevingen geanalyseerd, met bijzondere aandacht voor de manier waarop e-mails doorgaans worden gebruikt bij het aanmaken en opvolgen van tickets. Het doel was om de belangrijkste knelpunten te identificeren, zoals het gebrek aan structuur in e-mailinhoud en de tijd die nodig is om e-mailverkeer manueel te interpreteren.
 
 \textbf{Deliverable:} overzicht van het probleemdomein en afbakening van de scope.
 
@@ -29,29 +29,28 @@ Vervolgens werd nagegaan welke bestaande technologieën beschikbaar zijn voor au
 
 \subsection{Ontwerpfase}
 
-In de ontwerpfase werd de architectuur van de oplossing uitgewerkt. Hierbij werd bepaald hoe de verschillende componenten met elkaar communiceren: de tickettool, de backend Web API, het AI-model in Azure en de frontend testomgeving. Ook aspecten zoals beveiliging van API-sleutels en configuratiebeheer werden in deze fase vastgelegd.
+In de ontwerpfase werd de architectuur van de proof-of-concept uitgewerkt. Hierbij werd bepaald hoe de verschillende componenten met elkaar communiceren: de backend Web API, het AI-model binnen Azure en een eenvoudige frontend demo-interface. Daarnaast werden aspecten zoals configuratiebeheer en beveiliging van API-sleutels vastgelegd.
 
-\textbf{Deliverable:} technisch ontwerp van de oplossing en datastromen.
+\textbf{Deliverable:} technisch ontwerp van de proof-of-concept en bijhorende datastromen.
 
 \subsection{Implementatiefase}
 
-Tijdens de implementatiefase werd het ontwerp omgezet in een werkende oplossing. Er werd een backend Web API opgezet die e-mailinhoud extraheert en doorstuurt naar het AI-model. De configuratie werd veilig beheerd via user secrets. Daarnaast werd een eenvoudige frontend ontwikkeld met React (Vite) om de volledige flow te kunnen testen en demonstreren.
+Tijdens de implementatiefase werd het ontwerp omgezet in een werkende proof-of-concept. Er werd een backend Web API opgezet die e-mailinhoud ontvangt, verwerkt en doorstuurt naar het AI-model. De configuratie werd veilig beheerd via user secrets. Daarnaast werd een eenvoudige frontend ontwikkeld met React (Vite) om de volledige flow, van e-mailinvoer tot gegenereerde samenvatting, te kunnen demonstreren.
 
 \textbf{Deliverable:} werkende proof-of-concept met volledige end-to-end flow.
 
 \subsection{Testfase}
 
-De oplossing werd getest met behulp van Postman en verschillende praktijkscenario’s. Zowel functionele tests als eenvoudige performantie- en foutafhandelingstests werden uitgevoerd. De focus lag op de kwaliteit van de gegenereerde samenvattingen en de stabiliteit van de integratie.
+De oplossing werd getest met behulp van Postman en verschillende praktijkscenario’s. Zowel functionele tests als eenvoudige foutafhandelingstests werden uitgevoerd. De focus lag op de kwaliteit van de gegenereerde samenvattingen en de stabiliteit van de communicatie tussen backend en AI-model.
 
 \textbf{Deliverable:} testresultaten en evaluatie van de werking.
 
 \subsection{Evaluatie- en rapportagefase}
 
-Tot slot werden de resultaten geanalyseerd en werd een kostenraming opgesteld op basis van het aantal samenvattingen per dag. De bevindingen werden verwerkt in dit rapport, samen met conclusies en aanbevelingen voor verdere optimalisatie en toekomstig gebruik.
+Tot slot werden de resultaten geanalyseerd en werd een kostenraming opgesteld op basis van het verwachte aantal samenvattingen per dag. De bevindingen werden verwerkt in dit rapport, samen met conclusies en aanbevelingen voor verdere optimalisatie en toekomstig gebruik.
 
 \textbf{Deliverable:} eindrapport met conclusie en toekomstperspectief.
 
 \section{Verantwoording van de aanpak}
 
-De gekozen aanpak sluit nauw aan bij het karakter van een graduaatsproef in het domein Programmeren. Door te werken met een concrete case en een tastbaar eindproduct wordt niet alleen de technische haalbaarheid onderzocht, maar ook de praktische meerwaarde voor een echte werkomgeving. Deze methodologie laat toe om de onderzoeksvraag niet alleen theoretisch, maar ook empirisch te beantwoorden aan de hand van een werkende oplossing.
-
+De gekozen aanpak sluit nauw aan bij het karakter van een graduaatsproef in het domein Programmeren. Door te werken met een concrete case en een tastbaar proof-of-concept wordt niet alleen de technische haalbaarheid onderzocht, maar ook de potentiële meerwaarde voor een realistische werkomgeving. Deze methodologie laat toe om de onderzoeksvraag niet alleen theoretisch, maar ook empirisch te benaderen aan de hand van een werkende demo-oplossing.
