@@ -1,13 +1,33 @@
-%%=============================================================================
-%% Voorwoord
-%%=============================================================================
-
 \chapter*{\IfLanguageName{dutch}{Woord vooraf}{Preface}}%
 \label{ch:voorwoord}
 
-Deze graduaatsproef is tot stand gekomen binnen de context van ticket- en incidentopvolging, waar snelheid en correcte documentatie een grote impact hebben op de kwaliteit van support. Tijdens mijn stage merkte ik dat tickets vaak informatie bevatten die verspreid zit over e-mailverkeer. Het manueel samenvatten of kopiëren van relevante stukken kost tijd en zorgt er ook voor dat belangrijke context soms niet (of onvolledig) in het ticket terechtkomt.
+Deze graduaatsproef is tot stand gekomen binnen de context van ticket- en
+incidentopvolging, waar snelheid en correcte documentatie een grote impact
+hebben op de kwaliteit van support. Tijdens mijn stage merkte ik dat tickets
+vaak informatie bevatten die verspreid zit over e-mailverkeer. Het manueel doornemen, 
+samenvatten of kopiëren van relevante stukken kost tijd en zorgt er
+ook voor dat belangrijke context soms niet, of onvolledig, in het ticket terechtkomt.
 
-Daarom koos ik voor een oplossing die e-mails, gekoppeld aan nieuwe tickets in onze huidige tool, automatisch laat samenvatten met behulp van een AI-model via Microsoft Azure. De samenvatting wordt vervolgens toegevoegd aan het ticket. Het doel is om tickets sneller begrijpelijk te maken voor collega’s, de oplostijd te verkorten en tegelijk de kwaliteit van de ticketdocumentatie te verbeteren. Daarnaast biedt dit ook meerwaarde voor een knowledge base, omdat de kern van het probleem en de context beter gestructureerd beschikbaar worden.
 
-Ik wil graag mijn promotor en begeleiders bedanken voor de feedback en de richting die ze gaven tijdens het uitwerken van deze opdracht. Ook bedank ik mijn stagebedrijf voor de kans om dit onderwerp in een realistische omgeving uit te werken, inclusief de mogelijkheid om de volledige flow te testen (van e-mail extractie tot backend, frontend en verificatie met tools zoals Postman). Tot slot bedank ik mijn familie en vrienden voor hun steun tijdens dit traject.
+Daarom koos ik voor een oplossing die e-mails, gekoppeld aan nieuwe tickets
+binnen de bestaande ticketflow, automatisch laat samenvatten met behulp van
+een AI-model via Microsoft Azure. Bij het uitwerken van deze graduaatsproef
+werd rekening gehouden met de bestaande codebase en architectuur van het
+stagebedrijf. De oplossing zelf werd ontwikkeld als een afzonderlijke
+proof-of-concept, los van de productieomgeving, maar afgestemd op een
+realistische bedrijfscontext. De gegenereerde samenvatting wordt toegevoegd
+aan het ticket binnen de demo-oplossing.
 
+Het doel van deze graduaatsproef is om tickets sneller begrijpelijk te maken
+voor collega’s, de oplostijd te verkorten en tegelijk de kwaliteit van de
+ticketdocumentatie te verbeteren. Daarnaast biedt deze aanpak ook meerwaarde
+voor een knowledge base, omdat de kern van het probleem en de bijhorende
+context beter gestructureerd beschikbaar worden.
+
+Ik wil graag mijn promotor en begeleiders bedanken voor de feedback en de
+richting die zij gaven tijdens het uitwerken van deze opdracht. Ook bedank
+ik mijn stagebedrijf voor de kans om dit onderwerp in een realistische
+omgeving uit te werken, inclusief de mogelijkheid om de volledige flow te
+testen, van e-mailverwerking tot backend en frontend, en de validatie van de
+oplossing met tools zoals Postman. Tot slot wil ik iedereen bedanken die op
+enige wijze heeft bijgedragen aan het tot stand komen van deze graduaatsproef.
