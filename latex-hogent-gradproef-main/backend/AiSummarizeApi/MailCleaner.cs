@@ -24,8 +24,7 @@ static class MailCleaner
             "[TELEFOON]"
         );
 
-        text = Regex.Replace(text, @"(?m)^[A-Z][a-z]+ [A-Z][a-z]+$", "[NAAM]");
-
+        text = Regex.Replace(text, @"\b[A-Z][a-zà-öø-ÿ]+ [A-Z][a-zà-öø-ÿ]+\b", "[NAAM]");
         text = Regex.Replace(text, @"https?:\/\/\S+", "");
         text = Regex.Replace(text, @"www\.\S+", "");
         text = Regex.Replace(text, @"mailto:\S+", "");

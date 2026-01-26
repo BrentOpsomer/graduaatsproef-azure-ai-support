@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AiSummarizeApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+555643eae701d0aaea4c92349d71be5380d858a7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+29c770aa91c5ba010d2f86dfd9e46b9342042446")]
 [assembly: System.Reflection.AssemblyProductAttribute("AiSummarizeApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AiSummarizeApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
