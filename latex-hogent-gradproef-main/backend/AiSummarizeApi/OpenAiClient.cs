@@ -18,7 +18,7 @@ class OpenAiClient
         $"{_endpoint}/openai/deployments/{_deployment}/chat/completions?api-version=2024-02-15-preview";
 
     private const string SystemPrompt =
-        @"Je bent een support-assistent.
+        @"Je bent een support-assistent bij het bedrijf Carfac in Oudenaarde die enkel nederlandse output geeft.
 
         Je krijgt de inhoud van een e-mail.
 

@@ -7,13 +7,29 @@ static class MailCleaner
         if (string.IsNullOrWhiteSpace(text))
             return "";
 
-        // 1. Alleen echte links weg
-        text = Regex.Replace(text, @"https?:\/\/\S+", "", RegexOptions.IgnoreCase);
-        text = Regex.Replace(text, @"www\.\S+", "", RegexOptions.IgnoreCase);
-        text = Regex.Replace(text, @"mailto:\S+", "", RegexOptions.IgnoreCase);
-        text = Regex.Replace(text, @"tel:\S+", "", RegexOptions.IgnoreCase);
+        text = Regex.Replace(
+            text,
+            @"(Mvg|Met vriendelijke groet|Met vriendelijke groeten|Regards)[\s\S]{0,600}?(From:|Sent:)",
+            "$1\n[HANDTEKENING VERWIJDERD]\n$2",
+            RegexOptions.IgnoreCase
+        );
 
-        // 2. Whitespace netjes maken
+        text = Regex.Replace(text, @"\[cid:.*?\]", "", RegexOptions.IgnoreCase);
+
+        text = Regex.Replace(text, @"[\w\.-]+@[\w\.-]+\.\w+", "[EMAIL]");
+
+        text = Regex.Replace(
+            text,
+            @"\+?\d{2,3}[\s\-]?\(?\d{1,3}\)?[\s\-]?\d{2,3}[\s\-]?\d{2,4}[\s\-]?\d{2,4}",
+            "[TELEFOON]"
+        );
+
+        text = Regex.Replace(text, @"(?m)^[A-Z][a-z]+ [A-Z][a-z]+$", "[NAAM]");
+
+        text = Regex.Replace(text, @"https?:\/\/\S+", "");
+        text = Regex.Replace(text, @"www\.\S+", "");
+        text = Regex.Replace(text, @"mailto:\S+", "");
+
         text = Regex.Replace(text, @"\r\n", "\n");
         text = Regex.Replace(text, @"\n{3,}", "\n\n");
         text = Regex.Replace(text, @"\s{2,}", " ");

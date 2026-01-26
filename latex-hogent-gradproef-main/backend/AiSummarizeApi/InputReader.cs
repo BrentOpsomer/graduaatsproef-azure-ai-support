@@ -2,7 +2,11 @@ using System.Text.Json;
 
 static class InputReader
 {
-    public static async Task<string> ReadAsync(HttpRequest request, MsgReaderService msgReader)
+    public static async Task<string> ReadAsync(
+        HttpRequest request,
+        MsgReaderService msgReader,
+        EmlReaderService emlReader
+    )
     {
         string text = "";
 
@@ -17,7 +21,13 @@ static class InputReader
             var ext = Path.GetExtension(file.FileName).ToLowerInvariant();
 
             if (ext == ".msg")
+            {
                 text = await msgReader.ReadAsync(file);
+            }
+            else if (ext == ".eml")
+            {
+                text = await emlReader.ReadAsync(file);
+            }
             else
             {
                 using var sr = new StreamReader(file.OpenReadStream());

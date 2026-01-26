@@ -27,12 +27,13 @@ if (string.IsNullOrWhiteSpace(endpoint) || string.IsNullOrWhiteSpace(deployment)
 
 var openAi = new OpenAiClient(endpoint, deployment, apiKey);
 var msgReader = new MsgReaderService();
+var emlReader = new EmlReaderService();
 
 app.MapPost(
     "/api/summarize",
     async (HttpClient http, HttpRequest request) =>
     {
-        var emailText = await InputReader.ReadAsync(request, msgReader);
+        var emailText = await InputReader.ReadAsync(request, msgReader, emlReader);
         if (string.IsNullOrWhiteSpace(emailText))
             return Results.BadRequest("Geen tekst om samen te vatten.");
 

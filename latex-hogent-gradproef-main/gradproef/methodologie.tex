@@ -31,18 +31,77 @@ Vervolgens werd nagegaan welke bestaande technologieën beschikbaar zijn voor au
 
 In de ontwerpfase werd de architectuur van de proof-of-concept uitgewerkt. Hierbij werd bepaald hoe de verschillende componenten met elkaar communiceren: de backend Web API, het AI-model binnen Azure en een eenvoudige frontend demo-interface. Daarnaast werden aspecten zoals configuratiebeheer en beveiliging van API-sleutels vastgelegd.
 
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{images/architectuur.png}
+\caption{Architectuuroverzicht van de proof-of-concept}
+\label{fig:architecture}
+\end{figure}
+
 \textbf{Deliverable:} technisch ontwerp van de proof-of-concept en bijhorende datastromen.
 
 \subsection{Implementatiefase}
 
 Tijdens de implementatiefase werd het ontwerp omgezet in een werkende proof-of-concept. Er werd een backend Web API opgezet die e-mailinhoud ontvangt, verwerkt en doorstuurt naar het AI-model. De configuratie werd veilig beheerd via user secrets. Daarnaast werd een eenvoudige frontend ontwikkeld met React (Vite) om de volledige flow, van e-mailinvoer tot gegenereerde samenvatting, te kunnen demonstreren.
 
+\begin{listing}[h]
+\caption{Backend-aanroep naar Azure OpenAI voor het genereren van een samenvatting}
+\label{lst:openai}
+\begin{minted}{csharp}
+public async Task<string> SummarizeAsync(HttpClient http, string text)
+{
+    var payload = JsonSerializer.Serialize(new
+    {
+        messages = new[]
+        {
+            new { role = "system", content = SystemPrompt },
+            new { role = "user", content = text },
+        },
+        max_tokens = 200,
+        temperature = 0.2
+    });
+
+    var req = new HttpRequestMessage(HttpMethod.Post, Url);
+    req.Headers.Add("api-key", _apiKey);
+    req.Content = new StringContent(payload, Encoding.UTF8, "application/json");
+
+    var resp = await http.SendAsync(req);
+    resp.EnsureSuccessStatusCode();
+
+    using var doc = JsonDocument.Parse(await resp.Content.ReadAsStringAsync());
+    return doc.RootElement
+        .GetProperty("choices")[0]
+        .GetProperty("message")
+        .GetProperty("content")
+        .GetString();
+}
+\end{minted}
+\end{listing}
+
+\begin{figure}[h]
+\centering
+
+\includegraphics[width=0.8\textwidth]{images/supportui_1.png}
+
+\vspace{0.5em}
+
+\includegraphics[width=0.8\textwidth]{images/supportui_2.png}
+
+\vspace{0.5em}
+
+\includegraphics[width=0.8\textwidth]{images/supportui_3.png}
+
+\caption[Demo-flow]{Demo-flow van e-mailupload tot AI-samenvatting}
+\label{fig:demoflow}
+
+\end{figure}
+
+
 \textbf{Deliverable:} werkende proof-of-concept met volledige end-to-end flow.
 
 \subsection{Testfase}
 
-De oplossing werd getest met behulp van Postman en verschillende praktijkscenario’s. Zowel functionele tests als eenvoudige foutafhandelingstests werden uitgevoerd. De focus lag op de kwaliteit van de gegenereerde samenvattingen en de stabiliteit van de communicatie tussen backend en AI-model.
-
+De oplossing werd handmatig getest met behulp van Postman en verschillende praktijkscenario’s. Daarbij werd nagegaan of e-mails correct werden verwerkt en of het AI-model een bruikbare samenvatting terugstuurde. De gegenereerde samenvattingen werden manueel gecontroleerd om te beoordelen of de context van de e-mailconversaties correct werd weergegeven en of de communicatie tussen backend en AI-model stabiel verliep.
 \textbf{Deliverable:} testresultaten en evaluatie van de werking.
 
 \subsection{Evaluatie- en rapportagefase}

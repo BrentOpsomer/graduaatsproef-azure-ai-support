@@ -10,11 +10,11 @@
 using System;
 using System.Reflection;
 
-[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("869e4f5e-d9dc-4d11-90b3-50ed5a2821c4")]
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("c344bc42-6759-46dd-ade1-1b8c23b4891d")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("AiSummarizeApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f5b4080dfa23d3e5ca5e7af42e9861d82e6a1087")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+555643eae701d0aaea4c92349d71be5380d858a7")]
 [assembly: System.Reflection.AssemblyProductAttribute("AiSummarizeApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AiSummarizeApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

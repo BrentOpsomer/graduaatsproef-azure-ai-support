@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\stagiair\\Documents\\latex-hogent-gradproef-main\\latex-hogent-gradproef-main\\backend\\AiSummarizeApi\\AiSummarizeApi.csproj": {}
+    "C:\\Users\\brent\\OneDrive\\Bureaublad\\GradProef\\graduaatsproef-azure-ai-support\\latex-hogent-gradproef-main\\backend\\AiSummarizeApi\\AiSummarizeApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\stagiair\\Documents\\latex-hogent-gradproef-main\\latex-hogent-gradproef-main\\backend\\AiSummarizeApi\\AiSummarizeApi.csproj": {
+    "C:\\Users\\brent\\OneDrive\\Bureaublad\\GradProef\\graduaatsproef-azure-ai-support\\latex-hogent-gradproef-main\\backend\\AiSummarizeApi\\AiSummarizeApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\stagiair\\Documents\\latex-hogent-gradproef-main\\latex-hogent-gradproef-main\\backend\\AiSummarizeApi\\AiSummarizeApi.csproj",
+        "projectUniqueName": "C:\\Users\\brent\\OneDrive\\Bureaublad\\GradProef\\graduaatsproef-azure-ai-support\\latex-hogent-gradproef-main\\backend\\AiSummarizeApi\\AiSummarizeApi.csproj",
         "projectName": "AiSummarizeApi",
-        "projectPath": "C:\\Users\\stagiair\\Documents\\latex-hogent-gradproef-main\\latex-hogent-gradproef-main\\backend\\AiSummarizeApi\\AiSummarizeApi.csproj",
-        "packagesPath": "C:\\Users\\stagiair\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\stagiair\\Documents\\latex-hogent-gradproef-main\\latex-hogent-gradproef-main\\backend\\AiSummarizeApi\\obj\\",
+        "projectPath": "C:\\Users\\brent\\OneDrive\\Bureaublad\\GradProef\\graduaatsproef-azure-ai-support\\latex-hogent-gradproef-main\\backend\\AiSummarizeApi\\AiSummarizeApi.csproj",
+        "packagesPath": "C:\\Users\\brent\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\brent\\OneDrive\\Bureaublad\\GradProef\\graduaatsproef-azure-ai-support\\latex-hogent-gradproef-main\\backend\\AiSummarizeApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\stagiair\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\brent\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -55,6 +55,10 @@
               "target": "Package",
               "version": "[9.0.9, )"
             },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[4.14.0, )"
+            },
             "MsgReader": {
               "target": "Package",
               "version": "[6.0.6, )"
@@ -83,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.309/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

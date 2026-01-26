@@ -20,7 +20,7 @@
 
 \specialisation{Programmeren}
 \keywords{Azure OpenAI, GPT-4o-mini, Support, Automatisatie}
-% \projectrepo{https://github.com/BrentOpsomer/graduaatsproef-azure-ai-support}
+\projectrepo{https://github.com/BrentOpsomer/graduaatsproef-azure-ai-support}
 
 \begin{document}
 
@@ -45,13 +45,25 @@ De proof of concept bestaat uit een demo-applicatie waarbij de gebruiker een sup
 De architectuur is bewust modulair opgezet en bestaat uit drie componenten: een React-frontend, een .NET minimal API-backend en de Azure OpenAI Service. De backend fungeert als centrale schakel en verzorgt de beveiliging, validatie en communicatie met het AI-model. Deze opzet maakt het mogelijk om de oplossing later zonder grote aanpassingen te integreren in bestaande systemen.
 
 \section{Resultaten}
-De proof of concept toont aan dat Azure OpenAI in staat is om lange support-e-mails snel en accuraat samen te vatten. De gegenereerde samenvattingen zijn duidelijk, consistent en direct bruikbaar in een ticketsysteem. Dit leidt tot een betere leesbaarheid van tickets en ondersteunt snellere probleemanalyse door supportmedewerkers.
+De proof of concept toont aan dat Azure OpenAI in staat is om lange support-e-mails snel en accuraat samen te vatten. De gegenereerde samenvattingen zijn duidelijk, consistent en direct bruikbaar in een ticketsysteem.
+
+\begin{center}
+  \captionsetup{type=figure}
+  \includegraphics[width=0.8\linewidth]{demoUi_volledig}
+  \captionof{figure}{Demo van automatische e-mailsamenvatting in de webapplicatie}
+\end{center}
+
+
+
+Dit leidt tot een betere leesbaarheid van tickets en ondersteunt snellere probleemanalyse door supportmedewerkers.
+
 
 \section{Conclusie}
 Deze graduaatsproef bevestigt dat artificiële intelligentie een meerwaarde kan bieden binnen IT-supportprocessen. Door het automatiseren van samenvattingen wordt niet alleen tijd gewonnen, maar wordt ook de kwaliteit van documentatie verhoogd. De ontwikkelde proof of concept vormt een solide basis voor verdere implementatie in een productieomgeving.
 
 \section{Toekomstig werk}
 Mogelijke uitbreidingen omvatten de integratie in een bestaande supporttool, automatische classificatie van tickets, sentimentanalyse en koppeling met een knowledge base. Daarnaast kunnen extra veiligheidsmaatregelen worden toegevoegd, zoals PII-detectie, logging en strengere contentfilters.
-
 \end{multicols}
+
+
 \end{document}

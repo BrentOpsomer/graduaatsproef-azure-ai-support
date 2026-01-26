@@ -3,12 +3,13 @@
     <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>869e4f5e-d9dc-4d11-90b3-50ed5a2821c4</UserSecretsId>
     <UseSystemDrawing>true</UseSystemDrawing>
+    <UserSecretsId>c344bc42-6759-46dd-ade1-1b8c23b4891d</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.9" />
+    <PackageReference Include="MimeKit" Version="4.14.0" />
     <PackageReference Include="MsgReader" Version="6.0.6" />
     <PackageReference Include="System.Drawing.Common" Version="10.0.2" />
   </ItemGroup>
